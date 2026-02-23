@@ -1,0 +1,55 @@
+{
+  "agents": {
+    "ai_news_agent": {
+      "agent_id": "699bddd1336f11cbaf47f1db",
+      "name": "AI新知Agent",
+      "provider": "perplexity",
+      "model": "sonar-pro",
+      "has_schedule": true,
+      "schedule_id": "699bdddf399dfadeac387715"
+    },
+    "coding_news_agent": {
+      "agent_id": "699bddd1abc429f336b465f0",
+      "name": "Coding新知Agent",
+      "provider": "perplexity",
+      "model": "sonar-pro",
+      "has_schedule": true,
+      "schedule_id": "699bdddf399dfadeac387716"
+    },
+    "ranking_agent": {
+      "agent_id": "699bddd1cf61d84732195a83",
+      "name": "Ranking研究Agent",
+      "provider": "perplexity",
+      "model": "sonar-pro",
+      "has_schedule": true,
+      "schedule_id": "699bdddf399dfadeac387717"
+    },
+    "search_agent": {
+      "agent_id": "699bddd24df6471a57878996",
+      "name": "內容搜尋Agent",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "has_schedule": false
+    }
+  },
+  "schedules": {
+    "ai_news_schedule": {
+      "schedule_id": "699bdddf399dfadeac387715",
+      "agent_key": "ai_news_agent",
+      "cron": "0 7 * * *",
+      "timezone": "Asia/Taipei"
+    },
+    "coding_news_schedule": {
+      "schedule_id": "699bdddf399dfadeac387716",
+      "agent_key": "coding_news_agent",
+      "cron": "0 7 * * *",
+      "timezone": "Asia/Taipei"
+    },
+    "ranking_schedule": {
+      "schedule_id": "699bdddf399dfadeac387717",
+      "agent_key": "ranking_agent",
+      "cron": "0 8 * * 1",
+      "timezone": "Asia/Taipei"
+    }
+  }
+}

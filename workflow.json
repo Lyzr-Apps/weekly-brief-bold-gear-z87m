@@ -1,0 +1,86 @@
+{
+  "workflow": {
+    "nodes": [
+      {
+        "id": "input_node",
+        "type": "Input",
+        "label": "User Input",
+        "nodeCategory": "input"
+      },
+      {
+        "id": "ai_news_agent",
+        "type": "Agent",
+        "label": "AI新知Agent",
+        "nodeCategory": "agent",
+        "agent_id": "699bddd1336f11cbaf47f1db",
+        "provider": "perplexity",
+        "model": "sonar-pro",
+        "temperature": 0.3,
+        "schedule": {
+          "schedule_id": "699bdddf399dfadeac387715",
+          "cron": "0 7 * * *",
+          "timezone": "Asia/Taipei",
+          "description": "Daily at 7:00 AM Taipei time"
+        }
+      },
+      {
+        "id": "coding_news_agent",
+        "type": "Agent",
+        "label": "Coding新知Agent",
+        "nodeCategory": "agent",
+        "agent_id": "699bddd1abc429f336b465f0",
+        "provider": "perplexity",
+        "model": "sonar-pro",
+        "temperature": 0.3,
+        "schedule": {
+          "schedule_id": "699bdddf399dfadeac387716",
+          "cron": "0 7 * * *",
+          "timezone": "Asia/Taipei",
+          "description": "Daily at 7:00 AM Taipei time"
+        }
+      },
+      {
+        "id": "ranking_agent",
+        "type": "Agent",
+        "label": "Ranking研究Agent",
+        "nodeCategory": "agent",
+        "agent_id": "699bddd1cf61d84732195a83",
+        "provider": "perplexity",
+        "model": "sonar-pro",
+        "temperature": 0.2,
+        "schedule": {
+          "schedule_id": "699bdddf399dfadeac387717",
+          "cron": "0 8 * * 1",
+          "timezone": "Asia/Taipei",
+          "description": "Weekly Monday at 8:00 AM Taipei time"
+        }
+      },
+      {
+        "id": "search_agent",
+        "type": "Agent",
+        "label": "內容搜尋Agent",
+        "nodeCategory": "agent",
+        "agent_id": "699bddd24df6471a57878996",
+        "provider": "openai",
+        "model": "gpt-4.1",
+        "temperature": 0.2
+      },
+      {
+        "id": "output_node",
+        "type": "Output",
+        "label": "App Output",
+        "nodeCategory": "end"
+      }
+    ],
+    "edges": [
+      { "source": "input_node", "target": "ai_news_agent" },
+      { "source": "input_node", "target": "coding_news_agent" },
+      { "source": "input_node", "target": "ranking_agent" },
+      { "source": "input_node", "target": "search_agent" },
+      { "source": "ai_news_agent", "target": "output_node" },
+      { "source": "coding_news_agent", "target": "output_node" },
+      { "source": "ranking_agent", "target": "output_node" },
+      { "source": "search_agent", "target": "output_node" }
+    ]
+  }
+}

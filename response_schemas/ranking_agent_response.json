@@ -1,0 +1,42 @@
+{
+  "agent_name": "Ranking\u7814\u7a76Agent",
+  "agent_id": "699bddd1cf61d84732195a83",
+  "description": "\u7814\u7a76\u4e26\u6574\u7406AI\u61c9\u7528\u5de5\u5177\u7684\u6700\u65b0\u6392\u884c\u8cc7\u8a0a\uff0c\u5305\u62ec\u4f7f\u7528\u91cf\u3001\u8a55\u50f9\u3001\u529f\u80fd\u5c0d\u6bd4\uff0c\u751f\u6210\u7d50\u69cb\u5316\u7684\u6392\u884c\u699c\u5167\u5bb9",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "updatedAt": "string",
+    "rankings": [
+      {
+        "rank": "number",
+        "name": "string",
+        "description": "string",
+        "category": "string",
+        "score": "number",
+        "trend": "string",
+        "features": [
+          "string"
+        ]
+      }
+    ],
+    "totalCount": "number"
+  },
+  "example_response": {
+    "updatedAt": "\u6392\u884c\u66f4\u65b0\u6642\u9593 YYYY-MM-DD",
+    "rankings": [
+      {
+        "rank": 0,
+        "name": "\u61c9\u7528\u540d\u7a31",
+        "description": "\u61c9\u7528\u7c21\u4ecb",
+        "category": "\u61c9\u7528\u5206\u985e",
+        "score": 0,
+        "trend": "\u8da8\u52e2\uff1aup/down/stable",
+        "features": [
+          "sample string"
+        ]
+      }
+    ],
+    "totalCount": 0
+  }
+}

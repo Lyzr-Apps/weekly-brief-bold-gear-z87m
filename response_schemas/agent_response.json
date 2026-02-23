@@ -1,0 +1,36 @@
+{
+  "agent_name": "\u5167\u5bb9\u641c\u5c0bAgent",
+  "agent_id": "699bddd24df6471a57878996",
+  "description": "\u6839\u64da\u7528\u6236\u8f38\u5165\u7684\u95dc\u9375\u5b57\uff0c\u641c\u5c0bAI\u548c\u7a0b\u5f0f\u958b\u767c\u76f8\u95dc\u7684\u4e2d\u6587\u5167\u5bb9\uff0c\u8fd4\u56de\u76f8\u95dc\u6587\u7ae0\u548c\u6458\u8981",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "query": "string",
+    "results": [
+      {
+        "title": "string",
+        "summary": "string",
+        "source": "string",
+        "url": "string",
+        "relevance": "string",
+        "category": "string"
+      }
+    ],
+    "totalResults": "number"
+  },
+  "example_response": {
+    "query": "\u7528\u6236\u641c\u5c0b\u95dc\u9375\u5b57",
+    "results": [
+      {
+        "title": "\u6587\u7ae0\u6a19\u984c",
+        "summary": "\u6587\u7ae0\u6458\u8981",
+        "source": "\u4f86\u6e90",
+        "url": "\u9023\u7d50",
+        "relevance": "\u76f8\u95dc\u5ea6\uff1a\u9ad8/\u4e2d/\u4f4e",
+        "category": "\u6240\u5c6c\u5206\u985e\uff1aAI \u6216 Coding"
+      }
+    ],
+    "totalResults": 0
+  }
+}
